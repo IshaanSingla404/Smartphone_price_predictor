@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tell Forge what matters to you and get a value-first smartphone recommendation.">
+  <title>Forge | Selection Wizard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/wizard.js" defer></script>
+</head>
+<body class="flex min-h-screen flex-col text-on-surface antialiased">
+  <div class="bg-shader-sim"></div>
+  <header class="fixed top-0 z-50 w-full border-b border-white/10 bg-background/80 shadow-sm backdrop-blur-xl">
+    <div class="mx-auto flex w-full max-w-container-max items-center justify-between px-margin-mobile py-4 md:px-margin-desktop">
+      <a href="index.html" class="font-headline-md text-headline-md font-bold tracking-tighter">Forge</a>
+      <div class="mx-8 hidden max-w-md flex-1 md:block"><div class="h-1 w-full overflow-hidden rounded-full bg-surface-variant"><div data-progress class="h-full rounded-full bg-primary transition-[width] duration-500" style="width:25%"></div></div></div>
+      <a href="index.html" class="flex text-on-surface-variant transition-colors hover:text-primary" aria-label="Return to Forge home"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">account_circle</span></a>
+    </div>
+    <div class="h-1 w-full bg-surface-variant md:hidden"><div data-progress class="h-full bg-primary transition-[width] duration-500" style="width:25%"></div></div>
+  </header>
+  <main class="wizard-main mx-auto mt-[80px] flex w-full max-w-container-max flex-1 flex-col items-center justify-center px-margin-mobile py-stack-xl md:px-margin-desktop">
+    <section class="wizard-step active w-full max-w-4xl flex-col gap-stack-lg" data-step="1">
+      <div class="space-y-4 text-center"><p class="font-label-md text-label-md uppercase tracking-widest text-primary">Step 1 of 4</p><h1 class="hidden font-display-lg text-display-lg md:block">What matters most to you?</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">What matters most?</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Select the primary use cases that drive your daily experience. This focuses our intelligence engine.</p></div>
+      <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <button type="button" data-priority="performance" aria-pressed="false" class="glass-panel glow-hover group relative flex min-h-72 flex-col gap-4 rounded-[24px] p-8 text-left"><span class="material-symbols-outlined checkmark absolute right-6 top-6 text-primary">check_circle</span><span class="flex h-12 w-12 items-center justify-center rounded-full bg-surface-variant transition-colors group-hover:bg-primary-container/20"><span class="material-symbols-outlined text-2xl text-primary">sports_esports</span></span><strong class="font-headline-sm text-headline-sm font-medium">Performance &amp; Gaming</strong><span class="font-body-md text-body-md text-on-surface-variant">Maximum framerates, thermal efficiency, and zero lag.</span></button>
+        <button type="button" data-priority="photography" aria-pressed="true" class="glass-panel glow-hover active-selection group relative flex min-h-72 flex-col gap-4 rounded-[24px] p-8 text-left"><span class="material-symbols-outlined checkmark absolute right-6 top-6 text-primary">check_circle</span><span class="flex h-12 w-12 items-center justify-center rounded-full bg-surface-variant transition-colors group-hover:bg-primary-container/20"><span class="material-symbols-outlined text-2xl text-primary">photo_camera</span></span><strong class="font-headline-sm text-headline-sm font-medium">Photography</strong><span class="font-body-md text-body-md text-on-surface-variant">Computational photography, zoom capabilities, and low-light.</span></button>
+        <button type="button" data-priority="battery" aria-pressed="false" class="glass-panel glow-hover group relative flex min-h-72 flex-col gap-4 rounded-[24px] p-8 text-left"><span class="material-symbols-outlined checkmark absolute right-6 top-6 text-primary">check_circle</span><span class="flex h-12 w-12 items-center justify-center rounded-full bg-surface-variant transition-colors group-hover:bg-primary-container/20"><span class="material-symbols-outlined text-2xl text-primary">battery_charging_full</span></span><strong class="font-headline-sm text-headline-sm font-medium">Battery Life</strong><span class="font-body-md text-body-md text-on-surface-variant">Multi-day endurance and ultra-fast charging speeds.</span></button>
+      </div>
+    </section>
+    <section class="wizard-step w-full max-w-4xl flex-col gap-stack-lg" data-step="2">
+      <div class="space-y-4 text-center"><p class="font-label-md text-label-md uppercase tracking-widest text-primary">Step 2 of 4</p><h1 class="hidden font-display-lg text-display-lg md:block">What's your budget?</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">What's your budget?</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Choose your budget so Forge can recommend the best value-for-money smartphones for you.</p></div>
+      <div class="mx-auto mt-8 flex w-full max-w-2xl flex-col items-center gap-8">
+        <output data-budget-display class="text-display-xl font-bold tracking-tighter text-primary">₹35,000</output>
+        <div class="w-full px-4"><label for="budget" class="sr-only">Maximum budget</label><input id="budget" data-budget class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-surface-variant" type="range" min="10000" max="150000" step="5000" value="35000"><div class="mt-4 flex justify-between text-label-md text-on-surface-variant"><span>₹10k</span><span>₹1.5L+</span></div></div>
+        <div class="grid w-full grid-cols-2 gap-3 sm:grid-cols-4" data-budget-presets>
+          <button type="button" data-value="15000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹15k</button><button type="button" data-value="20000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹20k</button><button type="button" data-value="25000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹25k</button><button type="button" data-value="30000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹30k</button><button type="button" data-value="40000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹40k</button><button type="button" data-value="50000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹50k</button><button type="button" data-value="75000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹75k</button><button type="button" data-value="100000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹1L+</button>
+        </div>
+        <p class="text-center text-body-md italic text-on-surface-variant opacity-80">“We'll only recommend phones that offer exceptional value within your budget.”</p>
+      </div>
+    </section>
+    <section class="wizard-step w-full max-w-4xl flex-col gap-stack-lg" data-step="3">
+      <div class="space-y-4 text-center"><p class="font-label-md text-label-md uppercase tracking-widest text-primary">Step 3 of 4</p><h1 class="hidden font-display-lg text-display-lg md:block">Do you have a preferred brand?</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">Do you have a preferred brand?</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Optional — we'll prioritize your favorite brands, but we'll always recommend the best value for your money.</p></div>
+      <div class="mx-auto mt-8 flex w-full max-w-2xl flex-col items-center gap-8">
+        <button type="button" data-brand="No Preference" aria-pressed="true" class="active-selection brand-chip flex items-center gap-2 rounded-full border border-primary/50 bg-primary/10 px-8 py-3 text-label-md text-primary"><span class="material-symbols-outlined text-sm">check</span> No Preference</button>
+        <div class="grid w-full grid-cols-2 gap-3 md:grid-cols-5">
+          <button type="button" data-brand="Samsung" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Samsung</button><button type="button" data-brand="Apple" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Apple</button><button type="button" data-brand="Google" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Google</button><button type="button" data-brand="Nothing" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Nothing</button><button type="button" data-brand="OnePlus" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">OnePlus</button><button type="button" data-brand="Motorola" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Motorola</button><button type="button" data-brand="Xiaomi" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Xiaomi</button><button type="button" data-brand="Realme" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Realme</button><button type="button" data-brand="Vivo" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Vivo</button><button type="button" data-brand="Oppo" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Oppo</button>
+        </div>
+        <p class="text-center text-body-md italic text-on-surface-variant opacity-80">This step is optional and won't prevent us from recommending the best overall phone.</p>
+      </div>
+    </section>
+    <section class="wizard-step w-full max-w-4xl flex-col gap-stack-lg" data-step="4">
+      <div class="space-y-4 text-center"><p class="font-label-md text-label-md uppercase tracking-widest text-primary">Step 4 of 4</p><h1 class="hidden font-display-lg text-display-lg md:block">How long do you plan to keep your next phone?</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">How long do you plan to keep your next phone?</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Your answer helps Forge recommend devices that will continue performing well for as long as you plan to use them.</p></div>
+      <div class="mx-auto mt-8 flex w-full max-w-2xl flex-col items-center gap-8">
+        <div class="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
+          <button type="button" data-longevity="1–2 Years" class="glow-hover rounded-xl border border-white/10 bg-surface-variant/30 p-6 text-left hover:border-primary/50 hover:bg-primary/10"><span class="flex flex-col gap-2"><strong class="text-headline-sm">⏳ 1–2 Years</strong><span class="text-body-md text-on-surface-variant">Perfect if you upgrade frequently and want the best value today.</span></span></button>
+          <button type="button" data-longevity="3 Years" class="glow-hover rounded-xl border border-white/10 bg-surface-variant/30 p-6 text-left hover:border-primary/50 hover:bg-primary/10"><span class="flex flex-col gap-2"><strong class="text-headline-sm">📱 3 Years</strong><span class="text-body-md text-on-surface-variant">Balanced performance and long-term reliability.</span></span></button>
+          <button type="button" data-longevity="4 Years" class="glow-hover rounded-xl border border-white/10 bg-surface-variant/30 p-6 text-left hover:border-primary/50 hover:bg-primary/10"><span class="flex flex-col gap-2"><strong class="text-headline-sm">🚀 4 Years</strong><span class="text-body-md text-on-surface-variant">Built to stay fast with excellent software support.</span></span></button>
+          <button type="button" data-longevity="5+ Years" class="glow-hover rounded-xl border border-white/10 bg-surface-variant/30 p-6 text-left hover:border-primary/50 hover:bg-primary/10"><span class="flex flex-col gap-2"><strong class="text-headline-sm">💎 5+ Years</strong><span class="text-body-md text-on-surface-variant">Maximum longevity, premium hardware, and extended updates.</span></span></button>
+        </div>
+        <p class="text-center text-body-md italic text-on-surface-variant opacity-80">We'll prioritize phones that continue delivering great performance throughout your ownership.</p>
+      </div>
+    </section>
+  </main>
+  <div class="wizard-footer fixed bottom-0 z-40 w-full border-t border-white/5 bg-background/90 px-margin-mobile py-4 backdrop-blur-xl md:px-margin-desktop">
+    <div class="mx-auto flex max-w-container-max items-center justify-between">
+      <button type="button" data-previous class="rounded-full px-6 py-3 font-label-md text-label-md text-on-surface-variant transition-colors hover:bg-white/5 hover:text-on-surface">Previous</button>
+      <button type="button" data-next class="group flex items-center gap-2 rounded-full bg-inverse-primary px-8 py-3 font-label-md text-label-md text-white shadow-[0_0_20px_rgba(109,59,215,0.3)] transition-all hover:brightness-110 active:scale-[.98]">Continue <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span></button>
+    </div>
+  </div>
+  <p class="sr-only" aria-live="polite" data-announcer></p>
+</body>
+</html>

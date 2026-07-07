@@ -1,0 +1,36 @@
+<!doctype html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Forge is analyzing your smartphone preferences.">
+  <title>Forge | Finding Your Match</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/loading.js" defer></script>
+</head>
+<body class="flex min-h-screen flex-col text-on-surface antialiased">
+  <div class="bg-shader-sim"></div>
+  <header class="fixed top-0 z-50 w-full border-b border-white/10 bg-background/80 shadow-sm backdrop-blur-xl">
+    <div class="mx-auto flex w-full max-w-container-max items-center justify-between px-margin-mobile py-4 md:px-margin-desktop"><a href="index.html" class="font-headline-md text-headline-md font-bold tracking-tighter">Forge</a><a href="index.html" class="text-on-surface-variant hover:text-primary" aria-label="Return home"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">account_circle</span></a></div>
+  </header>
+  <main class="mx-auto mt-[80px] flex w-full max-w-container-max flex-1 flex-col items-center justify-center px-margin-mobile py-stack-xl md:px-margin-desktop">
+    <section class="flex w-full max-w-4xl flex-col gap-stack-lg text-center" aria-labelledby="loading-title">
+      <div class="space-y-8 py-stack-xl">
+        <div class="space-y-4"><h1 id="loading-title" class="hidden font-display-lg text-display-lg md:block">Finding your perfect phone...</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">Finding your perfect phone...</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Forge is analyzing your preferences and comparing hundreds of smartphones to find the best value for your budget.</p></div>
+        <div class="relative flex items-center justify-center py-12" aria-hidden="true"><div class="relative h-32 w-32"><div class="absolute inset-0 rounded-full border-4 border-primary/20"></div><div class="absolute inset-0 animate-spin rounded-full border-4 border-transparent border-t-primary"></div><div class="absolute inset-2 rounded-full border-2 border-secondary/20"></div><div class="loading-reverse absolute inset-2 rounded-full border-2 border-transparent border-t-secondary"></div><div class="absolute inset-0 animate-pulse rounded-full bg-primary/20 blur-xl"></div></div></div>
+        <div class="mx-auto max-w-md space-y-4 text-left" data-loading-list>
+          <div class="flex items-center gap-3 text-primary" data-state="complete"><span class="material-symbols-outlined text-sm">check_circle</span><span class="font-label-md">Understanding your priorities</span></div>
+          <div class="flex items-center gap-3 text-primary" data-state="complete"><span class="material-symbols-outlined text-sm">check_circle</span><span class="font-label-md">Evaluating your budget</span></div>
+          <div class="flex items-center gap-3 text-on-surface" data-state="active"><span class="material-symbols-outlined animate-spin text-sm">sync</span><span class="font-label-md">Comparing smartphones</span></div>
+          <div class="flex items-center gap-3 text-on-surface-variant opacity-50" data-state="pending"><span class="material-symbols-outlined text-sm">radio_button_unchecked</span><span class="font-label-md">Calculating Forge Scores</span></div>
+          <div class="flex items-center gap-3 text-on-surface-variant opacity-50" data-state="pending"><span class="material-symbols-outlined text-sm">radio_button_unchecked</span><span class="font-label-md">Ranking recommendations</span></div>
+        </div>
+        <p class="mt-8 text-body-md italic text-on-surface-variant opacity-60">This usually takes only a few seconds.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

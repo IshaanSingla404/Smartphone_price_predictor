@@ -24,7 +24,7 @@ def main():
     #dataset
     df = pd.read_csv("Data/cleaned_smartphones.csv")
 
-    X = df.drop(columns = ["price", "brand_name"])
+    X = df.drop(columns = ["price",])
     y = df["price"]
 
     #train test split:
@@ -83,6 +83,15 @@ def main():
     print(f"MAE : {mae:.2f}")
     print(f"RMSE: {rmse:.2f}")
     print(f"R²  : {r2:.4f}")
+
+    import os
+    import joblib
+
+    os.makedirs("models", exist_ok=True)
+
+    joblib.dump(pipeline, "models/pipeline.pkl")
+
+    print("\n Pipeline saved successfully!")
 
 
 

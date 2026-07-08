@@ -7,6 +7,13 @@ pipeline = joblib.load(MODEL_PATH)
 
 def predict_price(user_input):
 
+    """
+    Predict smartphone price based on thier specs.
+    
+    returns a float with predicted price in INR
+    
+    """
+
     input_df = pd.DataFrame([user_input])
     prediction = pipeline.predict(input_df)
 

@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
 
-DATA_PATH = "data/recommendation_data.csv"
+DATA_PATH = "Data/recommendation_data.csv"
 WINDOW_PERCENT = 0.10
 
 PROCESSOR_SCORE = {

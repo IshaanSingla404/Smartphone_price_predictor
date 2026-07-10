@@ -100,7 +100,12 @@ const emptyEl = document.querySelector('[data-recommendations-empty]');
 const topFive = recommendations.slice(0, 5);
 
 function recName(rec) {
-  const full = pick(rec, ['name', 'model_name', 'device_name']);
+  const full = pick(rec, [
+    'phone_name',
+    'name',
+    'model_name',
+    'device_name'
+  ]);
   if (full) return full;
   const brand = pick(rec, ['brand_name', 'brand']);
   const model = pick(rec, ['model']);

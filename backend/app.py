@@ -1,9 +1,10 @@
 from flask import Flask, request, jsonify
-
+from flask_cors import CORS
 from models.predict import predict_price
 from models.recommend import recommend_phones
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def home():

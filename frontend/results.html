@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Your Forge smartphone recommendation results.">
-  <title>Forge | Your Perfect Match</title>
+  <meta name="description" content="Your Forge smartphone price prediction and recommendations.">
+  <title>Forge | Your Prediction</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
@@ -17,27 +17,28 @@
   <main class="mx-auto mt-[80px] flex w-full max-w-container-max flex-1 flex-col items-center px-margin-mobile py-stack-xl md:px-margin-desktop">
     <section class="flex w-full max-w-4xl flex-col gap-stack-lg text-center">
       <div class="space-y-stack-lg py-stack-xl">
-        <div class="flex flex-col items-center space-y-4"><div class="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/20 bg-secondary/10 px-4 py-1.5 text-label-md text-secondary"><span class="material-symbols-outlined text-sm">check_circle</span>Recommendations Ready</div><h1 class="hidden font-display-lg text-display-lg md:block">We found your perfect match.</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">We found your perfect match.</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Based on your priorities, budget and preferences, here's the phone we'd confidently recommend.</p></div>
+        <div class="flex flex-col items-center space-y-4"><div class="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/20 bg-secondary/10 px-4 py-1.5 text-label-md text-secondary"><span class="material-symbols-outlined text-sm">check_circle</span>Prediction Ready</div><h1 class="hidden font-display-lg text-display-lg md:block">Here's what your phone is worth.</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">Here's what your phone is worth.</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Based on the specs you entered, Forge's model estimated a price and found similar phones worth comparing.</p></div>
+
         <article id="recommendation" class="results-card glass-panel glow-hover relative overflow-hidden rounded-xl p-8 md:p-12">
-          <div class="absolute left-6 top-6 rounded-full border border-primary/30 bg-primary/20 px-4 py-1.5 text-label-md font-bold text-primary">🏆 Best Match</div>
-          <div class="absolute right-6 top-6 text-right"><div class="text-display-lg font-bold leading-none text-primary">96</div><div class="text-label-sm uppercase tracking-widest text-on-surface-variant">Exceptional Value</div></div>
-          <div class="mt-12 flex flex-col items-center gap-12 md:flex-row">
-            <div class="flex w-full justify-center md:w-1/2"><img src="assets/images/nothing-phone-3.png" alt="Nothing Phone (3)" class="max-h-[400px] object-contain drop-shadow-[0_20px_50px_rgba(160,120,255,0.3)]"></div>
+          <div class="absolute left-6 top-6 rounded-full border border-primary/30 bg-primary/20 px-4 py-1.5 text-label-md font-bold text-primary">🤖 AI Prediction</div>
+          <div class="absolute right-6 top-6 text-right"><div class="text-label-sm uppercase tracking-widest text-on-surface-variant">Optimized For</div><div data-preference-label class="text-headline-sm font-bold leading-none text-primary">—</div></div>
+          <div class="mt-16 flex flex-col items-center gap-12 md:mt-12 md:flex-row">
+            <div class="flex w-full justify-center md:w-1/2"><img src="assets/images/phone-alternative.png" alt="Your custom phone configuration" class="max-h-[400px] object-contain drop-shadow-[0_20px_50px_rgba(160,120,255,0.3)]"></div>
             <div class="w-full space-y-6 text-left md:w-1/2">
-              <div><h2 class="text-headline-md font-bold">Nothing Phone (3)</h2><div class="mt-2 inline-flex items-center gap-2 rounded-full bg-secondary/20 px-3 py-1 text-label-sm text-secondary">Excellent Deal</div></div>
-              <div class="grid grid-cols-2 gap-4"><div><p class="text-label-sm text-on-surface-variant">Market Price</p><p class="text-headline-sm font-bold">₹29,999</p></div><div><p class="text-label-sm text-on-surface-variant">Fair Price</p><p class="text-headline-sm text-on-surface-variant">₹32,400</p></div></div>
-              <div class="rounded-lg border border-primary/20 bg-primary/10 p-4"><p class="text-body-md font-bold text-primary">You save ₹2,401</p></div>
-              <div class="flex flex-wrap gap-2"><span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-label-sm">🎮 Great for Gaming</span><span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-label-sm">🔋 Outstanding Battery</span><span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-label-sm">✨ Clean Software</span></div>
-              <div class="flex gap-4 pt-4"><button type="button" data-details class="flex-1 rounded-full bg-inverse-primary px-6 py-3 font-label-md text-white shadow-[0_0_20px_rgba(109,59,215,0.3)] transition-all hover:brightness-110">View Details</button><button type="button" data-compare="Nothing Phone (3)" class="flex-1 rounded-full border border-white/20 px-6 py-3 font-label-md transition-all hover:bg-white/5">Compare</button></div>
+              <div><h2 class="text-headline-md font-bold">Your Custom Configuration</h2><div data-brand-os-pill class="mt-2 inline-flex items-center gap-2 rounded-full bg-secondary/20 px-3 py-1 text-label-sm text-secondary">—</div></div>
+              <div class="grid grid-cols-2 gap-4"><div><p class="text-label-sm text-on-surface-variant">Predicted Price</p><p data-predicted-price class="text-headline-sm font-bold">—</p></div><div><p class="text-label-sm text-on-surface-variant">Closest Match</p><p data-closest-match-price class="text-headline-sm text-on-surface-variant">—</p></div></div>
+              <div data-price-delta-box class="rounded-lg border border-primary/20 bg-primary/10 p-4"><p data-price-delta class="text-body-md font-bold text-primary">Calculating value comparison…</p></div>
+              <div data-spec-chips class="flex flex-wrap gap-2"></div>
+              <div class="flex gap-4 pt-4"><button type="button" data-details class="flex-1 rounded-full bg-inverse-primary px-6 py-3 font-label-md text-white shadow-[0_0_20px_rgba(109,59,215,0.3)] transition-all hover:brightness-110">View Full Specs</button><a href="wizard.html" class="flex-1 rounded-full border border-white/20 px-6 py-3 text-center font-label-md transition-all hover:bg-white/5">Start Over</a></div>
+              <dl data-spec-details class="hidden grid-cols-2 gap-x-6 gap-y-2 border-t border-white/10 pt-4 text-body-md"></dl>
             </div>
           </div>
         </article>
+
         <section class="space-y-8 pt-12" aria-labelledby="alternatives-title">
-          <h2 id="alternatives-title" class="text-left text-headline-sm font-bold">Other Great Choices</h2>
-          <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-            <article class="glass-panel glow-hover space-y-4 rounded-xl p-6 text-left"><div class="flex items-start justify-between"><div class="text-headline-sm font-bold text-primary">92</div><span class="text-label-sm text-secondary">Great Deal</span></div><img src="assets/images/phone-alternative.png" alt="iPhone 15" class="mx-auto h-32 object-contain"><div><h3 class="font-bold">iPhone 15</h3><p class="text-label-md text-on-surface-variant">₹69,900</p></div><button type="button" data-compare="iPhone 15" class="w-full rounded-full border border-white/10 py-2 text-label-sm transition-all hover:bg-white/5">Compare</button></article>
-            <article class="glass-panel glow-hover space-y-4 rounded-xl p-6 text-left"><div class="flex items-start justify-between"><div class="text-headline-sm font-bold text-primary">89</div><span class="text-label-sm text-secondary">Great Deal</span></div><img src="assets/images/phone-alternative.png" alt="Pixel 8" class="mx-auto h-32 object-contain"><div><h3 class="font-bold">Pixel 8</h3><p class="text-label-md text-on-surface-variant">₹54,999</p></div><button type="button" data-compare="Pixel 8" class="w-full rounded-full border border-white/10 py-2 text-label-sm transition-all hover:bg-white/5">Compare</button></article>
-            <article class="glass-panel glow-hover space-y-4 rounded-xl p-6 text-left"><div class="flex items-start justify-between"><div class="text-headline-sm font-bold text-primary">88</div><span class="text-label-sm text-secondary">Great Deal</span></div><img src="assets/images/phone-alternative.png" alt="Samsung S23" class="mx-auto h-32 object-contain"><div><h3 class="font-bold">Samsung S23</h3><p class="text-label-md text-on-surface-variant">₹49,999</p></div><button type="button" data-compare="Samsung S23" class="w-full rounded-full border border-white/10 py-2 text-label-sm transition-all hover:bg-white/5">Compare</button></article>
+          <h2 id="alternatives-title" class="text-left text-headline-sm font-bold">Top 5 Recommendations</h2>
+          <div data-recommendations-grid class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <p data-recommendations-empty class="col-span-full text-body-md text-on-surface-variant">Loading recommendations…</p>
           </div>
         </section>
       </div>

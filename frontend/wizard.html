@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tell Forge what matters to you and get a value-first smartphone recommendation.">
+  <meta name="description" content="Tell Forge the specs of your phone and get an instant AI price prediction plus similar phone recommendations.">
   <title>Forge | Selection Wizard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,47 +22,184 @@
     <div class="h-1 w-full bg-surface-variant md:hidden"><div data-progress class="h-full bg-primary transition-[width] duration-500" style="width:25%"></div></div>
   </header>
   <main class="wizard-main mx-auto mt-[80px] flex w-full max-w-container-max flex-1 flex-col items-center justify-center px-margin-mobile py-stack-xl md:px-margin-desktop">
+
+    <!-- STEP 1: Basic Information -->
     <section class="wizard-step active w-full max-w-4xl flex-col gap-stack-lg" data-step="1">
-      <div class="space-y-4 text-center"><p class="font-label-md text-label-md uppercase tracking-widest text-primary">Step 1 of 4</p><h1 class="hidden font-display-lg text-display-lg md:block">What matters most to you?</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">What matters most?</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Select the primary use cases that drive your daily experience. This focuses our intelligence engine.</p></div>
-      <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <button type="button" data-priority="performance" aria-pressed="false" class="glass-panel glow-hover group relative flex min-h-72 flex-col gap-4 rounded-[24px] p-8 text-left"><span class="material-symbols-outlined checkmark absolute right-6 top-6 text-primary">check_circle</span><span class="flex h-12 w-12 items-center justify-center rounded-full bg-surface-variant transition-colors group-hover:bg-primary-container/20"><span class="material-symbols-outlined text-2xl text-primary">sports_esports</span></span><strong class="font-headline-sm text-headline-sm font-medium">Performance &amp; Gaming</strong><span class="font-body-md text-body-md text-on-surface-variant">Maximum framerates, thermal efficiency, and zero lag.</span></button>
-        <button type="button" data-priority="photography" aria-pressed="true" class="glass-panel glow-hover active-selection group relative flex min-h-72 flex-col gap-4 rounded-[24px] p-8 text-left"><span class="material-symbols-outlined checkmark absolute right-6 top-6 text-primary">check_circle</span><span class="flex h-12 w-12 items-center justify-center rounded-full bg-surface-variant transition-colors group-hover:bg-primary-container/20"><span class="material-symbols-outlined text-2xl text-primary">photo_camera</span></span><strong class="font-headline-sm text-headline-sm font-medium">Photography</strong><span class="font-body-md text-body-md text-on-surface-variant">Computational photography, zoom capabilities, and low-light.</span></button>
-        <button type="button" data-priority="battery" aria-pressed="false" class="glass-panel glow-hover group relative flex min-h-72 flex-col gap-4 rounded-[24px] p-8 text-left"><span class="material-symbols-outlined checkmark absolute right-6 top-6 text-primary">check_circle</span><span class="flex h-12 w-12 items-center justify-center rounded-full bg-surface-variant transition-colors group-hover:bg-primary-container/20"><span class="material-symbols-outlined text-2xl text-primary">battery_charging_full</span></span><strong class="font-headline-sm text-headline-sm font-medium">Battery Life</strong><span class="font-body-md text-body-md text-on-surface-variant">Multi-day endurance and ultra-fast charging speeds.</span></button>
+      <div class="space-y-4 text-center"><p class="font-label-md text-label-md uppercase tracking-widest text-primary">Step 1 of 4</p><h1 class="hidden font-display-lg text-display-lg md:block">Let's start with the basics.</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">Let's start with the basics.</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Tell Forge the brand and operating system of the device you want priced.</p></div>
+      <div class="mx-auto mt-8 flex w-full max-w-2xl flex-col gap-8">
+        <div class="w-full space-y-3">
+          <label class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Brand</label>
+          <div class="grid w-full grid-cols-2 gap-3 md:grid-cols-5" data-chip-group="brand_name">
+            <button type="button" data-value="Samsung" aria-pressed="true" class="active-selection rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Samsung</button>
+            <button type="button" data-value="Apple" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Apple</button>
+            <button type="button" data-value="Google" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Google</button>
+            <button type="button" data-value="Nothing" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Nothing</button>
+            <button type="button" data-value="OnePlus" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">OnePlus</button>
+            <button type="button" data-value="Motorola" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Motorola</button>
+            <button type="button" data-value="Xiaomi" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Xiaomi</button>
+            <button type="button" data-value="Realme" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Realme</button>
+            <button type="button" data-value="Vivo" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Vivo</button>
+            <button type="button" data-value="Oppo" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Oppo</button>
+          </div>
+        </div>
+        <div class="w-full space-y-3">
+          <label for="os" class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Operating System</label>
+          <div class="relative">
+            <select id="os" data-field="os" class="w-full appearance-none rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md text-on-surface transition-colors hover:border-primary/50 focus:border-primary/50 focus:outline-none">
+              <option value="Android">Android</option>
+              <option value="iOS">iOS</option>
+              <option value="HarmonyOS">HarmonyOS</option>
+            </select>
+            <span class="material-symbols-outlined pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant">expand_more</span>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- STEP 2: Performance -->
     <section class="wizard-step w-full max-w-4xl flex-col gap-stack-lg" data-step="2">
-      <div class="space-y-4 text-center"><p class="font-label-md text-label-md uppercase tracking-widest text-primary">Step 2 of 4</p><h1 class="hidden font-display-lg text-display-lg md:block">What's your budget?</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">What's your budget?</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Choose your budget so Forge can recommend the best value-for-money smartphones for you.</p></div>
-      <div class="mx-auto mt-8 flex w-full max-w-2xl flex-col items-center gap-8">
-        <output data-budget-display class="text-display-xl font-bold tracking-tighter text-primary">₹35,000</output>
-        <div class="w-full px-4"><label for="budget" class="sr-only">Maximum budget</label><input id="budget" data-budget class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-surface-variant" type="range" min="10000" max="150000" step="5000" value="35000"><div class="mt-4 flex justify-between text-label-md text-on-surface-variant"><span>₹10k</span><span>₹1.5L+</span></div></div>
-        <div class="grid w-full grid-cols-2 gap-3 sm:grid-cols-4" data-budget-presets>
-          <button type="button" data-value="15000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹15k</button><button type="button" data-value="20000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹20k</button><button type="button" data-value="25000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹25k</button><button type="button" data-value="30000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹30k</button><button type="button" data-value="40000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹40k</button><button type="button" data-value="50000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹50k</button><button type="button" data-value="75000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹75k</button><button type="button" data-value="100000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">₹1L+</button>
+      <div class="space-y-4 text-center"><p class="font-label-md text-label-md uppercase tracking-widest text-primary">Step 2 of 4</p><h1 class="hidden font-display-lg text-display-lg md:block">How powerful should it be?</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">How powerful should it be?</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Set the memory, storage and processor specs Forge should price.</p></div>
+      <div class="mx-auto mt-8 grid w-full max-w-3xl grid-cols-1 gap-8 md:grid-cols-2">
+        <div class="w-full space-y-3">
+          <label class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">RAM</label>
+          <div class="grid w-full grid-cols-4 gap-3" data-chip-group="ram" data-numeric="true">
+            <button type="button" data-value="4" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">4 GB</button>
+            <button type="button" data-value="6" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">6 GB</button>
+            <button type="button" data-value="8" aria-pressed="true" class="active-selection rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">8 GB</button>
+            <button type="button" data-value="12" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">12 GB</button>
+            <button type="button" data-value="16" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">16 GB</button>
+            <button type="button" data-value="18" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">18 GB</button>
+            <button type="button" data-value="24" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">24 GB</button>
+          </div>
         </div>
-        <p class="text-center text-body-md italic text-on-surface-variant opacity-80">“We'll only recommend phones that offer exceptional value within your budget.”</p>
+        <div class="w-full space-y-3">
+          <label class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Storage</label>
+          <div class="grid w-full grid-cols-3 gap-3" data-chip-group="storage" data-numeric="true">
+            <button type="button" data-value="32" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">32 GB</button>
+            <button type="button" data-value="64" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">64 GB</button>
+            <button type="button" data-value="128" aria-pressed="true" class="active-selection rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">128 GB</button>
+            <button type="button" data-value="256" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">256 GB</button>
+            <button type="button" data-value="512" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">512 GB</button>
+            <button type="button" data-value="1024" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">1 TB</button>
+          </div>
+        </div>
+        <div class="w-full space-y-3">
+          <label class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Processor Brand</label>
+          <div class="grid w-full grid-cols-2 gap-3" data-chip-group="processor_brand">
+            <button type="button" data-value="Snapdragon" aria-pressed="true" class="active-selection rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Snapdragon</button>
+            <button type="button" data-value="MediaTek" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">MediaTek</button>
+            <button type="button" data-value="Exynos" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Exynos</button>
+            <button type="button" data-value="Apple Bionic" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Apple Bionic</button>
+            <button type="button" data-value="Google Tensor" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Google Tensor</button>
+            <button type="button" data-value="Unisoc" aria-pressed="false" class="rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Unisoc</button>
+          </div>
+        </div>
+        <div class="w-full space-y-3">
+          <label class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Number of Cores</label>
+          <div class="grid w-full grid-cols-4 gap-3" data-chip-group="num_cores" data-numeric="true">
+            <button type="button" data-value="4" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">4</button>
+            <button type="button" data-value="6" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">6</button>
+            <button type="button" data-value="8" aria-pressed="true" class="active-selection rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">8</button>
+            <button type="button" data-value="10" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">10</button>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- STEP 3: Camera & Display -->
     <section class="wizard-step w-full max-w-4xl flex-col gap-stack-lg" data-step="3">
-      <div class="space-y-4 text-center"><p class="font-label-md text-label-md uppercase tracking-widest text-primary">Step 3 of 4</p><h1 class="hidden font-display-lg text-display-lg md:block">Do you have a preferred brand?</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">Do you have a preferred brand?</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Optional — we'll prioritize your favorite brands, but we'll always recommend the best value for your money.</p></div>
-      <div class="mx-auto mt-8 flex w-full max-w-2xl flex-col items-center gap-8">
-        <button type="button" data-brand="No Preference" aria-pressed="true" class="active-selection brand-chip flex items-center gap-2 rounded-full border border-primary/50 bg-primary/10 px-8 py-3 text-label-md text-primary"><span class="material-symbols-outlined text-sm">check</span> No Preference</button>
-        <div class="grid w-full grid-cols-2 gap-3 md:grid-cols-5">
-          <button type="button" data-brand="Samsung" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Samsung</button><button type="button" data-brand="Apple" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Apple</button><button type="button" data-brand="Google" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Google</button><button type="button" data-brand="Nothing" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Nothing</button><button type="button" data-brand="OnePlus" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">OnePlus</button><button type="button" data-brand="Motorola" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Motorola</button><button type="button" data-brand="Xiaomi" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Xiaomi</button><button type="button" data-brand="Realme" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Realme</button><button type="button" data-brand="Vivo" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Vivo</button><button type="button" data-brand="Oppo" class="brand-chip rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md hover:border-primary/50 hover:bg-primary/20">Oppo</button>
+      <div class="space-y-4 text-center"><p class="font-label-md text-label-md uppercase tracking-widest text-primary">Step 3 of 4</p><h1 class="hidden font-display-lg text-display-lg md:block">Camera &amp; display specs.</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">Camera &amp; display specs.</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Dial in the imaging hardware and screen that matter to you.</p></div>
+      <div class="mx-auto mt-8 grid w-full max-w-3xl grid-cols-1 gap-8 md:grid-cols-2">
+        <div class="w-full space-y-3 md:col-span-2">
+          <div class="flex items-center justify-between"><label for="rearMp" class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Rear Camera</label><output data-field-display="primary_rear_camera" class="text-headline-sm font-bold text-primary">50 MP</output></div>
+          <input id="rearMp" type="range" data-field="primary_rear_camera" data-numeric="true" min="8" max="200" step="1" value="50" class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-surface-variant">
         </div>
-        <p class="text-center text-body-md italic text-on-surface-variant opacity-80">This step is optional and won't prevent us from recommending the best overall phone.</p>
+        <div class="w-full space-y-3">
+          <label class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Rear Cameras</label>
+          <div class="grid w-full grid-cols-4 gap-3" data-chip-group="num_rear_cameras" data-numeric="true">
+            <button type="button" data-value="1" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">1</button>
+            <button type="button" data-value="2" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">2</button>
+            <button type="button" data-value="3" aria-pressed="true" class="active-selection rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">3</button>
+            <button type="button" data-value="4" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">4</button>
+          </div>
+        </div>
+        <div class="w-full space-y-3 md:col-span-2">
+          <div class="flex items-center justify-between"><label for="frontMp" class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Front Camera</label><output data-field-display="primary_front_camera" class="text-headline-sm font-bold text-primary">16 MP</output></div>
+          <input id="frontMp" type="range" data-field="primary_front_camera" data-numeric="true" min="2" max="60" step="1" value="16" class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-surface-variant">
+        </div>
+        <div class="w-full space-y-3">
+          <label class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Front Cameras</label>
+          <div class="grid w-full grid-cols-2 gap-3" data-chip-group="num_front_cameras" data-numeric="true">
+            <button type="button" data-value="1" aria-pressed="true" class="active-selection rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">1</button>
+            <button type="button" data-value="2" aria-pressed="false" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">2</button>
+          </div>
+        </div>
+        <div class="w-full space-y-3">
+          <label for="displayType" class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Display Type</label>
+          <div class="relative">
+            <select id="displayType" data-field="display_type" class="w-full appearance-none rounded-xl border border-white/10 bg-surface-variant/30 px-4 py-3 text-label-md text-on-surface transition-colors hover:border-primary/50 focus:border-primary/50 focus:outline-none">
+              <option value="AMOLED">AMOLED</option>
+              <option value="Super AMOLED">Super AMOLED</option>
+              <option value="LTPO AMOLED">LTPO AMOLED</option>
+              <option value="OLED">OLED</option>
+              <option value="IPS LCD">IPS LCD</option>
+              <option value="TFT">TFT</option>
+            </select>
+            <span class="material-symbols-outlined pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant">expand_more</span>
+          </div>
+        </div>
+        <div class="w-full space-y-3 md:col-span-2">
+          <div class="flex items-center justify-between"><label for="displaySize" class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Display Size</label><output data-field-display="display_size" class="text-headline-sm font-bold text-primary">6.7"</output></div>
+          <input id="displaySize" type="range" data-field="display_size" data-numeric="true" data-float="true" min="4.0" max="7.5" step="0.1" value="6.7" class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-surface-variant">
+        </div>
       </div>
     </section>
+
+    <!-- STEP 4: Battery & Features -->
     <section class="wizard-step w-full max-w-4xl flex-col gap-stack-lg" data-step="4">
-      <div class="space-y-4 text-center"><p class="font-label-md text-label-md uppercase tracking-widest text-primary">Step 4 of 4</p><h1 class="hidden font-display-lg text-display-lg md:block">How long do you plan to keep your next phone?</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">How long do you plan to keep your next phone?</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Your answer helps Forge recommend devices that will continue performing well for as long as you plan to use them.</p></div>
-      <div class="mx-auto mt-8 flex w-full max-w-2xl flex-col items-center gap-8">
-        <div class="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
-          <button type="button" data-longevity="1–2 Years" class="glow-hover rounded-xl border border-white/10 bg-surface-variant/30 p-6 text-left hover:border-primary/50 hover:bg-primary/10"><span class="flex flex-col gap-2"><strong class="text-headline-sm">⏳ 1–2 Years</strong><span class="text-body-md text-on-surface-variant">Perfect if you upgrade frequently and want the best value today.</span></span></button>
-          <button type="button" data-longevity="3 Years" class="glow-hover rounded-xl border border-white/10 bg-surface-variant/30 p-6 text-left hover:border-primary/50 hover:bg-primary/10"><span class="flex flex-col gap-2"><strong class="text-headline-sm">📱 3 Years</strong><span class="text-body-md text-on-surface-variant">Balanced performance and long-term reliability.</span></span></button>
-          <button type="button" data-longevity="4 Years" class="glow-hover rounded-xl border border-white/10 bg-surface-variant/30 p-6 text-left hover:border-primary/50 hover:bg-primary/10"><span class="flex flex-col gap-2"><strong class="text-headline-sm">🚀 4 Years</strong><span class="text-body-md text-on-surface-variant">Built to stay fast with excellent software support.</span></span></button>
-          <button type="button" data-longevity="5+ Years" class="glow-hover rounded-xl border border-white/10 bg-surface-variant/30 p-6 text-left hover:border-primary/50 hover:bg-primary/10"><span class="flex flex-col gap-2"><strong class="text-headline-sm">💎 5+ Years</strong><span class="text-body-md text-on-surface-variant">Maximum longevity, premium hardware, and extended updates.</span></span></button>
+      <div class="space-y-4 text-center"><p class="font-label-md text-label-md uppercase tracking-widest text-primary">Step 4 of 4</p><h1 class="hidden font-display-lg text-display-lg md:block">Battery, features &amp; priority.</h1><h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden">Battery, features &amp; priority.</h1><p class="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant">Last step — set the battery and connectivity features, then tell us what to optimize for.</p></div>
+      <div class="mx-auto mt-8 flex w-full max-w-3xl flex-col gap-10">
+        <div class="w-full space-y-4">
+          <div class="flex items-center justify-between"><output data-field-display="battery_capacity" class="text-display-xl font-bold tracking-tighter text-primary">5000 mAh</output></div>
+          <div class="w-full px-4"><label for="battery" class="sr-only">Battery capacity</label><input id="battery" type="range" data-field="battery_capacity" data-numeric="true" min="2000" max="8000" step="100" value="5000" class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-surface-variant"><div class="mt-4 flex justify-between text-label-md text-on-surface-variant"><span>2,000 mAh</span><span>8,000 mAh</span></div></div>
+          <div class="grid w-full grid-cols-4 gap-3" data-battery-presets>
+            <button type="button" data-value="3000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">3,000</button>
+            <button type="button" data-value="4000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">4,000</button>
+            <button type="button" data-value="5000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">5,000</button>
+            <button type="button" data-value="6000" class="rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20">6,000</button>
+          </div>
         </div>
-        <p class="text-center text-body-md italic text-on-surface-variant opacity-80">We'll prioritize phones that continue delivering great performance throughout your ownership.</p>
+        <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
+          <div class="space-y-3"><label class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Fast Charging</label><div class="flex w-full gap-3" data-chip-group="has_fast_charging">
+            <button type="button" data-value="Yes" aria-pressed="true" class="active-selection flex flex-1 items-center justify-center gap-2 rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20"><span class="material-symbols-outlined checkmark text-sm">check</span>Yes</button>
+            <button type="button" data-value="No" aria-pressed="false" class="flex flex-1 items-center justify-center gap-2 rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20"><span class="material-symbols-outlined checkmark text-sm">check</span>No</button>
+          </div></div>
+          <div class="space-y-3"><label class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">5G</label><div class="flex w-full gap-3" data-chip-group="has_5g">
+            <button type="button" data-value="Yes" aria-pressed="true" class="active-selection flex flex-1 items-center justify-center gap-2 rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20"><span class="material-symbols-outlined checkmark text-sm">check</span>Yes</button>
+            <button type="button" data-value="No" aria-pressed="false" class="flex flex-1 items-center justify-center gap-2 rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20"><span class="material-symbols-outlined checkmark text-sm">check</span>No</button>
+          </div></div>
+          <div class="space-y-3"><label class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">NFC</label><div class="flex w-full gap-3" data-chip-group="has_nfc">
+            <button type="button" data-value="Yes" aria-pressed="true" class="active-selection flex flex-1 items-center justify-center gap-2 rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20"><span class="material-symbols-outlined checkmark text-sm">check</span>Yes</button>
+            <button type="button" data-value="No" aria-pressed="false" class="flex flex-1 items-center justify-center gap-2 rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20"><span class="material-symbols-outlined checkmark text-sm">check</span>No</button>
+          </div></div>
+          <div class="space-y-3"><label class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Fingerprint</label><div class="flex w-full gap-3" data-chip-group="has_fingerprint">
+            <button type="button" data-value="Yes" aria-pressed="true" class="active-selection flex flex-1 items-center justify-center gap-2 rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20"><span class="material-symbols-outlined checkmark text-sm">check</span>Yes</button>
+            <button type="button" data-value="No" aria-pressed="false" class="flex flex-1 items-center justify-center gap-2 rounded-full border border-white/10 bg-surface-variant/30 px-4 py-2 text-label-md hover:border-primary/50 hover:bg-primary/20"><span class="material-symbols-outlined checkmark text-sm">check</span>No</button>
+          </div></div>
+        </div>
+        <div class="w-full space-y-3">
+          <label class="block text-left font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Recommendation Preference</label>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3" data-chip-group="preference">
+            <button type="button" data-value="performance" aria-pressed="true" class="glass-panel glow-hover active-selection group relative flex min-h-40 flex-col gap-3 rounded-[24px] p-6 text-left"><span class="material-symbols-outlined checkmark absolute right-5 top-5 text-primary">check_circle</span><span class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-variant transition-colors group-hover:bg-primary-container/20"><span class="material-symbols-outlined text-xl text-primary">sports_esports</span></span><strong class="font-headline-sm text-headline-sm font-medium">Performance</strong></button>
+            <button type="button" data-value="camera" aria-pressed="false" class="glass-panel glow-hover group relative flex min-h-40 flex-col gap-3 rounded-[24px] p-6 text-left"><span class="material-symbols-outlined checkmark absolute right-5 top-5 text-primary">check_circle</span><span class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-variant transition-colors group-hover:bg-primary-container/20"><span class="material-symbols-outlined text-xl text-primary">photo_camera</span></span><strong class="font-headline-sm text-headline-sm font-medium">Camera</strong></button>
+            <button type="button" data-value="battery" aria-pressed="false" class="glass-panel glow-hover group relative flex min-h-40 flex-col gap-3 rounded-[24px] p-6 text-left"><span class="material-symbols-outlined checkmark absolute right-5 top-5 text-primary">check_circle</span><span class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-variant transition-colors group-hover:bg-primary-container/20"><span class="material-symbols-outlined text-xl text-primary">battery_charging_full</span></span><strong class="font-headline-sm text-headline-sm font-medium">Battery</strong></button>
+            <button type="button" data-value="display" aria-pressed="false" class="glass-panel glow-hover group relative flex min-h-40 flex-col gap-3 rounded-[24px] p-6 text-left"><span class="material-symbols-outlined checkmark absolute right-5 top-5 text-primary">check_circle</span><span class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-variant transition-colors group-hover:bg-primary-container/20"><span class="material-symbols-outlined text-xl text-primary">aspect_ratio</span></span><strong class="font-headline-sm text-headline-sm font-medium">Display</strong></button>
+            <button type="button" data-value="balanced" aria-pressed="false" class="glass-panel glow-hover group relative flex min-h-40 flex-col gap-3 rounded-[24px] p-6 text-left"><span class="material-symbols-outlined checkmark absolute right-5 top-5 text-primary">check_circle</span><span class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-variant transition-colors group-hover:bg-primary-container/20"><span class="material-symbols-outlined text-xl text-primary">balance</span></span><strong class="font-headline-sm text-headline-sm font-medium">Balanced</strong></button>
+          </div>
+        </div>
       </div>
     </section>
+
   </main>
   <div class="wizard-footer fixed bottom-0 z-40 w-full border-t border-white/5 bg-background/90 px-margin-mobile py-4 backdrop-blur-xl md:px-margin-desktop">
     <div class="mx-auto flex max-w-container-max items-center justify-between">

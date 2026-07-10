@@ -66,7 +66,7 @@ if (!storedSpecs) {
 } else {
   const phoneSpecs = JSON.parse(storedSpecs);
 
-  fetch('https://forge-backend-dh8s.onrender.com', {
+  fetch('https://forge-backend-dh8s.onrender.com/predict', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(phoneSpecs)

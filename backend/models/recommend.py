@@ -300,6 +300,29 @@ def score_balanced(filtered_df):
 
     return filtered_df.head(5)
 
+
+def recommend_phones(predicted_price, preference):
+
+    filtered = filter_by_budget(predicted_price)
+
+    if preference == "performance":
+        return score_performance(filtered)
+
+    elif preference == "camera":
+        return score_camera(filtered)
+
+    elif preference == "battery":
+        return score_battery(filtered)
+
+    elif preference == "display":
+        return score_display(filtered)
+
+    elif preference == "balanced":
+        return score_balanced(filtered)
+
+    else:
+        raise ValueError("Invalid Preference")
+
 if __name__ == "__main__":
 
     filtered = filter_by_budget(38000)
